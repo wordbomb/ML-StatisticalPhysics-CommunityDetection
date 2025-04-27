@@ -64,7 +64,7 @@ This command uses the com-amazon network, adopts the ground-truth partition as l
 
 - `results/LOL-leiden.png` provides a visualization showing that small communities may be neglected when using traditional statistical physics methods.
 
-![img](results/LOL-leiden_00.png) 
+![img](results/LOL-leiden.png) 
 
 ## 📄 Citation
 If you use this code or find it helpful, please cite it using the following BibTeX entry:
