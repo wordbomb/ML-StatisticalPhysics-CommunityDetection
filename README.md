@@ -23,7 +23,7 @@ You can access the full paper here:
 - `results/`  
   Stores the experiment results:
   - `Appendix_ARI.xlsx`, `Appendix_NMI.xlsx`, `Appendix_Q.xlsx`: Summarized evaluation results (Adjusted Rand Index, Normalized Mutual Information, Modularity Q).
-  - `results/LOL-leiden.pdf`: Visualization of the LOL network after community detection using the Leiden algorithm. This figure illustrates that traditional statistical physics methods may easily overlook small communities.
+  - `results/LOL-leiden.png`: Visualization of the LOL network after community detection using the Leiden algorithm. This figure illustrates that traditional statistical physics methods may easily overlook small communities.
 
 ---
 
@@ -62,9 +62,9 @@ This command uses the com-amazon network, adopts the ground-truth partition as l
 - Appendix_ARI.xlsx, Appendix_NMI.xlsx, and Appendix_Q.xlsx summarize the evaluation metrics across all datasets.
 
 
-- `results/LOL-leiden.pdf` provides a visualization showing that small communities may be neglected when using traditional statistical physics methods.
+- `results/LOL-leiden.png` provides a visualization showing that small communities may be neglected when using traditional statistical physics methods.
 
-![img](results\\LOL-leiden_00.png) 
+![img](results\LOL-leiden_00.png) 
 
 ## 📄 Citation
 If you use this code or find it helpful, please cite it using the following BibTeX entry:
