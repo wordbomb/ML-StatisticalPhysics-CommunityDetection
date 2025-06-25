@@ -73,8 +73,8 @@ if __name__ == '__main__':
     node2vec = Node2Vec(
         G,
         dimensions=128,
-        walk_length=20,
-        num_walks=3,
+        walk_length=80,
+        num_walks=10,
         p=1.0,
         q=1.0,
         workers=4
