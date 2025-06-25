@@ -93,5 +93,5 @@ if __name__ == '__main__':
     pred_labels = kmeans.fit_predict(X)
 
     # evaluation
-    q, nmi, ari = cal_q(G, pred_labels)
+    q = cal_q(G, pred_labels)
     print(f"Modularity: {q:.4f}")

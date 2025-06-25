@@ -175,6 +175,6 @@ if __name__ == "__main__":
   
     gcn_preds = five_fold_predict_batch(copy.deepcopy(data), GCN, batch_size=1024)
     
-    gcn_q, gcn_nmi, gcn_ari = cal_q(G, gcn_preds.cpu().numpy())
+    gcn_q = cal_q(G, gcn_preds.cpu().numpy())
 
     print(f"GCN -> Modularity: {gcn_q:.4f}")
