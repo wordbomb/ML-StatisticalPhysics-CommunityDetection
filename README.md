@@ -4,7 +4,9 @@ This repository contains the code accompanying the paper **"Machine Learning Inf
 
 We combine machine learning techniques with micro- and mesoscopic statistical physics insights to enhance the performance of community detection tasks.
 
-You can access the full paper here:  
+This paper has been accepted by *Chaos: An Interdisciplinary Journal of Nonlinear Science* and will be published soon.  
+The DOI is [10.1063/5.0268930](https://doi.org/10.1063/5.0268930) (currently pending activation).  
+The preprint is available at:  
 [**arXiv:2504.13538**](https://arxiv.org/abs/2504.13538)
 
 ---
@@ -16,6 +18,17 @@ You can access the full paper here:
 
 - `main.py`  
   Main entry point of the project.
+
+- `main.py`  
+  Main entry point of the project.
+
+- `baselines/`  
+  Contains baseline methods used for comparison:
+  - `CSEA.py`: CESA-based community detection.
+  - `Node2Vec.py`: Node2Vec embedding + clustering.
+  - `LINE.py`: LINE embedding + clustering.
+  - `GCN.py`: GCN-based community detection.
+
 
 - `utils.py`  
   Utility functions that support the main pipeline (e.g., data loading, preprocessing, metric computation).
@@ -51,12 +64,21 @@ Name of the network dataset (e.g., com-amazon, com-dblp, etc.)
 
   - 2: Use 2-hop (second-order) neighbor information.
 
+
 **Example**:
 ```bash
 python main.py --filename com-amazon --am gt --order 1
 ```
 
 This command uses the com-amazon network, adopts the ground-truth partition as labels, and considers 1-hop neighbor information for learning.
+
+To reproduce the results of our proposed model and compare it with multiple baselines (CSEA, Node2Vec, LINE, GCN),you can run each baseline individually:
+```bash
+python baselines/CSEA.py      # CESA method
+python baselines/Node2Vec.py  # Node2Vec embedding + KMeans clustering
+python baselines/LINE.py      # LINE embedding + KMeans clustering
+python baselines/GCN.py       # Graph Convolutional Network
+```
 
 ## 📈 Results
 - Appendix_ARI.xlsx, Appendix_NMI.xlsx, and Appendix_Q.xlsx summarize the evaluation metrics across all datasets.
